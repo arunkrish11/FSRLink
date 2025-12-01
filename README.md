@@ -1,9 +1,83 @@
 FSRLink
+=======
 
-This project aim to perform - Form submission to Sheet and accessing those data into a Receipt.
+FSRLink is a lightweight system that allows users to submit form data, store it in Google Sheets, and generate a PDF receipt using that data.
 
-For running on any browser
+This project is built using Next.js, Google Sheets API, and pdf-lib.
+
+Live Demo
+---------
+
+Website: [https://fsr-link.vercel.app/](https://fsr-link.vercel.app/)YouTube Demo: [https://youtu.be/3THGfAawo7Y](https://youtu.be/3THGfAawo7Y)
+
+Features
+--------
+
+*   Submit form data to Google Sheets
+    
+*   Secure Google Service Account authentication
+    
+*   Retrieve and display stored submissions
+    
+*   Generate a PDF receipt for each entry
+    
+*   Simple UI and easy deployment
+    
+
+Tech Stack
+----------
+
+*   Next.js (App Router)
+    
+*   TypeScript
+    
+*   Google Sheets API
+    
+*   pdf-lib
+    
+*   Vercel
+    
+
+Project Structure
+-----------------
+
+src/  app/    api/      orders/        route.ts – POST (add order), GET (fetch all orders)      orders/\[id\]/        route.ts – Fetch order by ID and generate PDF    orders/      page.tsx – UI for listing orders  lib/    google.ts – Google Sheets client setup
+
+Environment Variables
+---------------------
+
+Create a .env file with:
+
+GOOGLE\_SHEET\_ID=GOOGLE\_CLIENT\_EMAIL=GOOGLE\_PRIVATE\_KEY=
+
+Add them to Vercel:
+
+vercel env add GOOGLE\_SHEET\_IDvercel env add GOOGLE\_CLIENT\_EMAILvercel env add GOOGLE\_PRIVATE\_KEY
+
+Pull them locally:
+
+vercel env pull .env
+
+Installation
+------------
+
+git clone cd fsrlinknpm install
+
+Running Locally
+---------------
 
 npm run dev
 
-Thank you
+Then open:
+
+[http://localhost:3000](http://localhost:3000)
+
+Deployment
+----------
+
+vercelvercel --prod
+
+License
+-------
+
+This project is for learning and demonstration purposes.
