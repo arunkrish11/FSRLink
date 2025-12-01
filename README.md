@@ -8,7 +8,8 @@ This project is built using Next.js, Google Sheets API, and pdf-lib.
 Live Demo
 ---------
 
-Website: [https://fsr-link.vercel.app/](https://fsr-link.vercel.app/)YouTube Demo: [https://youtu.be/3THGfAawo7Y](https://youtu.be/3THGfAawo7Y)
+Website: [https://fsr-link.vercel.app/](https://fsr-link.vercel.app/)
+YouTube Demo: [https://youtu.be/3THGfAawo7Y](https://youtu.be/3THGfAawo7Y)
 
 Features
 --------
@@ -41,27 +42,34 @@ Tech Stack
 Project Structure
 -----------------
 
-src/  app/    api/      orders/        route.ts – POST (add order), GET (fetch all orders)      orders/\[id\]/        route.ts – Fetch order by ID and generate PDF    orders/      page.tsx – UI for listing orders  lib/    google.ts – Google Sheets client setup
+src/  
+ app/    
+  api/      
+   orders/        
+    route.ts – POST (add order), GET (fetch all orders)      
+   orders/
+    \[id\]/        
+      route.ts – Fetch order by ID and generate PDF    
+ orders/      
+  page.tsx – UI for listing orders  
+lib/    
+ google.ts – Google Sheets client setup
 
 Environment Variables
 ---------------------
 
 Create a .env file with:
 
-GOOGLE\_SHEET\_ID=GOOGLE\_CLIENT\_EMAIL=GOOGLE\_PRIVATE\_KEY=
-
-Add them to Vercel:
-
-vercel env add GOOGLE\_SHEET\_IDvercel env add GOOGLE\_CLIENT\_EMAILvercel env add GOOGLE\_PRIVATE\_KEY
-
-Pull them locally:
-
-vercel env pull .env
+GOOGLE\_SHEET\_ID=
+GOOGLE\_CLIENT\_EMAIL=
+GOOGLE\_PRIVATE\_KEY=
 
 Installation
 ------------
 
-git clone cd fsrlinknpm install
+git clone https://github.com/arunkrish11/FSRLink
+cd fsrlink
+npm install
 
 Running Locally
 ---------------
